@@ -6,7 +6,7 @@
    m [pin] [value] -> set pin mode
 */
 
-#include <Messenger.h>
+#include "Messenger.h"
 #include <PrintEx.h>
 using namespace ios;
 
@@ -16,13 +16,9 @@ Messenger message = Messenger();
 
 void messageCompleted(void)
 {
-  //  const char *str;
-  //  message.copyString(*str, 5);
-  //  stream << "copyString=" << str << endl;
-
   char c = message.readChar();
   int pin, state;
-  //stream << "char=" << c << endl;
+
   switch (c)
   {
     case 'r':
